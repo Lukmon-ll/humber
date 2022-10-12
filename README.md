@@ -1,5 +1,5 @@
 # Humber
-Humber college projects 
-in web development
-using html, css, js, .net, php, and database application projects with scripting languages, sql and plsql ...
+Humber College Projects 
+In Web Development
+using HTML, CSS, JavaScript, ASP.NET, C# and RDBMS SQL scripting exercises in SQLite, MySQL and other RDBMSs.
 
