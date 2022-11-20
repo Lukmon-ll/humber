@@ -16,23 +16,22 @@ namespace Cummulative1.Controllers
             return View();
         }
 
-        public ActionResult TeacherList()
+        public ActionResult TeacherList(string SearchKey=null)
         {
 
             TeacherDataController ControllerTlist = new TeacherDataController();
-
-            IEnumerable<Teacher> Tlist = ControllerTlist.TeachersList() ;
+            IEnumerable<Teacher> Tlist = ControllerTlist.TeachersList(SearchKey) ;
 
             
-
-          
             return View(Tlist);
         }
 
-        public ActionResult TeacherShow(int id)
+        public ActionResult TeacherShow(int? id)
         {
             TeacherDataController ControllerTlist = new TeacherDataController();
             Teacher Tlist = ControllerTlist.FindTeacher(id);
+            
+            ViewBag.SearchKey = id;
 
             return View(Tlist);
         }

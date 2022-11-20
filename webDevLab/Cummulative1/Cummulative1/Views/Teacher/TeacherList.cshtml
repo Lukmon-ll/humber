@@ -7,13 +7,20 @@
 
 <h2>Teachers List</h2>
 
+<form action="/Teacher/TeacherList" method="POST">
+    <input type="text" name="SearchKey" autocomplete="" />
+    <input type="submit" value="Search" />
 
-@foreach(var Teach in Model) 
+</form>
+
+@foreach (var Teach in Model)
 {
-   <div>
-       @Teach.TeacherFname @Teach.TeacherLname
+    <div>
+        @Teach.TeacherFname @Teach.TeacherLname
 
-   </div>
+    </div>
 }
+
+
 
 

@@ -3,7 +3,29 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>School Database</h1>
 
-<p>This is my testing server rendering page </p>
+<h3>Search the school database for teachers at convenience.</h3>
+
+<form action="/Teacher/TeacherShow" method="GET">
+    <label>Search by ID</label></br>
+    <input type="number" name="id" value="" />
+    <input type="submit" value="Search" />
+</form>
+</br>
+
+
+<h3>You can also search the School Database for teachers by other indices at convenience</h3>
+</br>
+
+<form action="/Teacher/TeacherList" method="POST">
+
+    <label>Search by others: firstname, lastname, hiredate and salary</label></br>
+
+    <input type="text" name="SearchKey" autocomplete="" />
+
+    <input type="submit" value="Search" />
+
+</form>
+
 

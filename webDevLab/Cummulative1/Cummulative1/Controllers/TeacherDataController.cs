@@ -19,8 +19,10 @@ namespace Cummulative1.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
+
+        [Route("api/TeacherData/TeachersList/{SearchKey}")]
         [HttpGet]
-        public IEnumerable<Teacher> TeachersList()
+        public IEnumerable<Teacher> TeachersList(string SearchKey=null)
         {
             MySqlConnection Conn = SchoolIns.AccessDatabase();
 
@@ -28,7 +30,7 @@ namespace Cummulative1.Controllers
 
             MySqlCommand cmd = Conn.CreateCommand();
 
-            cmd.CommandText = "SELECT * FROM teachers";
+            cmd.CommandText = "SELECT * FROM teachers WHERE teacherfname LIKE '%"+SearchKey+"%' OR teacherlname LIKE '%"+SearchKey+"%' OR salary  LIKE '%"+SearchKey+"%' OR hiredate LIKE '%"+SearchKey+"%'";
 
             MySqlDataReader ResultSet = cmd.ExecuteReader();
 
@@ -67,7 +69,7 @@ namespace Cummulative1.Controllers
 
         [Route("api/TeacherData/FindTeacher/{id}")]
         [HttpGet]
-        public Teacher FindTeacher(int id)
+        public Teacher FindTeacher(int? id)
         {
             MySqlConnection Conn = SchoolIns.AccessDatabase();
 
@@ -80,6 +82,7 @@ namespace Cummulative1.Controllers
             MySqlDataReader ResultSet = cmd.ExecuteReader();
 
             Teacher Teach = new Teacher();
+
 
             while (ResultSet.Read())
             {
@@ -104,6 +107,7 @@ namespace Cummulative1.Controllers
 
             return Teach;
         }
+
 
     }
 }
