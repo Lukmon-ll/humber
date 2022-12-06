@@ -26,7 +26,7 @@ namespace Cummulative1.Controllers
             return View(Tlist);
         }
 
-        public ActionResult TeacherShow(int? id)
+        public ActionResult TeacherShow(int? id = null)
         {
             TeacherDataController ControllerTlist = new TeacherDataController();
             Teacher Tlist = ControllerTlist.FindTeacher(id);
