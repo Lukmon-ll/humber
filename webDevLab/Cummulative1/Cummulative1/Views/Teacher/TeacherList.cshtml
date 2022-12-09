@@ -16,7 +16,8 @@
 @foreach (var Teach in Model)
 {
     <div>
-        @Teach.TeacherFname @Teach.TeacherLname
+        <a href="/Teacher/TeacherShow?id=@Teach.TeacherId">@Teach.TeacherFname @Teach.TeacherLname</a> 
+         
 
     </div>
 }
