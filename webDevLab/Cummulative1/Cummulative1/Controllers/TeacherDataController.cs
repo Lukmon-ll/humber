@@ -111,6 +111,24 @@ namespace Cummulative1.Controllers
             return Teach;
         }
 
+        [HttpPost]
+        public void DeleteTeacher(int id) 
+        {
+
+            MySqlConnection Conn = SchoolIns.AccessDatabase();
+
+            Conn.Open();
+
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            cmd.CommandText = "delete FROM teachers WHERE TeacherId = " + @id;
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+
+            MySqlDataReader ResultSet = cmd.ExecuteReader();
+
+        }
+
 
     }
 }
