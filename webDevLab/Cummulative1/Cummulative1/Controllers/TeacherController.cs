@@ -50,7 +50,7 @@ namespace Cummulative1.Controllers
         }
 
 
-        public ActionResult DelTeacher(int? id = null) 
+        public ActionResult DelTeacher(int id) 
         {
 
             TeacherDataController myControl = new TeacherDataController();

@@ -113,7 +113,7 @@ namespace Cummulative1.Controllers
 
         [Route("api/TeacherData/DeleteTeacher/{id?}")]
         [HttpGet]
-        public void DeleteTeacher(int? id = null) 
+        public void DeleteTeacher(int id) 
         {
 
             MySqlConnection Conn = SchoolIns.AccessDatabase();

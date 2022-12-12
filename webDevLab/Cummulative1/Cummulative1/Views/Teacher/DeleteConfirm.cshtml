@@ -9,5 +9,8 @@
 <h2>Delete Confirm</h2>
 <div>Are you sure to delete @Model.TeacherFname @Model.TeacherLname from the database</div>
 
-<button>Delete Teacher</button>
+<form action="/Teacher/DelTeacher/@Model.TeacherId" method="GET">
+
+    <input type="submit" name="name" value="Delete Teacher" />
+</form>
 
