@@ -111,8 +111,9 @@ namespace Cummulative1.Controllers
             return Teach;
         }
 
-        [HttpPost]
-        public void DeleteTeacher(int id) 
+        [Route("api/TeacherData/DeleteTeacher/{id?}")]
+        [HttpGet]
+        public void DeleteTeacher(int? id = null) 
         {
 
             MySqlConnection Conn = SchoolIns.AccessDatabase();
@@ -121,11 +122,14 @@ namespace Cummulative1.Controllers
 
             MySqlCommand cmd = Conn.CreateCommand();
 
-            cmd.CommandText = "delete FROM teachers WHERE TeacherId = " + @id;
+            cmd.CommandText = "delete from teachers where teacherid =@id";
             cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
             cmd.ExecuteNonQuery();
 
-            MySqlDataReader ResultSet = cmd.ExecuteReader();
+            Conn.Close();
+
+            
 
         }
 
