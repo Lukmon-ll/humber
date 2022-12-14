@@ -33,14 +33,16 @@ function pageload(){
                 //thetest.innerHTML = xhttp.response;
                 const RES = xhttp.response;
                 
-                console.log(RES);
-                console.log(RES.main.temp);
-                console.log(RES.weather[0].description);
-                console.log(RES.weather[0].icon);
+                //console.log(RES);
+                //console.log(RES.main.temp);
+                //console.log(RES.weather[0].description);
+                //console.log(RES.weather[0].icon);
                 city.innerHTML = "Toronto";
                 TEMP.innerHTML = RES.main.temp + "'C";
                 WC.innerHTML = RES.weather[0].description;
-                IC.innerHTML = RES.weather[0].icon;
+                let ICdata = RES.weather[0].icon;
+                console.log(ICdata);
+                IC.innerHTML = '"' + '<img src=' + '"' + 'http://openweathermap.org/img/wn/' + ICdata + '.png' + '"' + '/>' + '"';
                 WS.innerHTML = RES.wind.speed;
 
             }
@@ -75,7 +77,9 @@ function pageload(){
                 city.innerHTML = "Mississauga";
                 TEMP.innerHTML = RES.main.temp + "'C";
                 WC.innerHTML = RES.weather[0].description;
-                IC.innerHTML = RES.weather[0].icon;
+                let ICdata = RES.weather[0].icon;
+                console.log(ICdata);
+                IC.innerHTML = '"' + '<img src=' + '"' + 'http://openweathermap.org/img/wn/' + ICdata + '.png' + '"' + '/>' + '"';
                 WS.innerHTML = RES.wind.speed;
 
             }
