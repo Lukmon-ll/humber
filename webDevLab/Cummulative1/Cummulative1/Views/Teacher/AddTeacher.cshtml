@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "AddTeacher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Teacher</h2>
+
+<form action="/Teacher/CreateTeacher" method="post">
+    <div>
+        <label for="TeacherFname">Teacher First Name</label>
+        <input type="text" name="TeacherFname" value="" id="TeacherFname" />
+    </div>
+    <div></div>
+    <label for="TeacherLname">Teacher Last Name</label>
+    <input type="text" name="TeacherLname" value="" id="TeacherLname" />
+    <div>
+        <label for="TeacherSalary">Teacher Salary</label>
+        <input type="text" name="TeacherSalary" value="" id="TeacherSalary" />
+    </div>
+    <div>
+        <label for="TeacherHireDate">Teacher hire date</label>
+        <input type="date" name="TeacherHireDate" value="" id="TeacherHireDate" />
+    </div>
+
+    <div>
+        <input type="submit" name="name" value="Create Teacher" />
+    </div>
+</form>
+

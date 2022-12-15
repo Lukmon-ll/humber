@@ -132,6 +132,30 @@ namespace Cummulative1.Controllers
             
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newTeacher"></param>
+        public void Create(Teacher newTeacher) 
+        {
+
+            MySqlConnection Conn = SchoolIns.AccessDatabase();
+
+            Conn.Open();
+
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            cmd.CommandText = "insert into teachers (teacherfname, teacherlname, salary, hiredate) values (@teacherfname, @teacherlname, @salary, @hiredate)";
+            cmd.Parameters.AddWithValue("@teacherfname", newTeacher.TeacherFname);
+            cmd.Parameters.AddWithValue("@teacherlname", newTeacher.TeacherLname);
+            cmd.Parameters.AddWithValue("@salary", newTeacher.TeacherSalary);
+            cmd.Parameters.AddWithValue("@hiredate", newTeacher.TeacherHireDate);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+
+            Conn.Close();
+
+        }
 
 
     }

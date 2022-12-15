@@ -11,6 +11,10 @@
 
 <form action="/Teacher/DelTeacher/@Model.TeacherId" method="GET">
 
-    <input type="submit" name="name" value="Delete Teacher" />
+    <input type="submit" name="name" value="YES, delete @Model.TeacherFname @Model.TeacherLname" />
+    
+</form>
+<form action="/Teacher/TeacherList" method="post">
+    <input type="submit" name="name" value="Cancel" />
 </form>
 
