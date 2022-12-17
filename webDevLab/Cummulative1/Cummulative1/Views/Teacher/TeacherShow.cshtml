@@ -8,8 +8,9 @@
     var data = ViewBag.SearchKey;
  }
 
-<a href="/Teacher/TeacherList">Back to teacher's list</a>
+<a href="/Teacher/TeacherList">List of Teachers</a>
 <a href="/Teacher/DeleteConfirm?id=@Model.TeacherId" style="float: right">Delete</a>
+
 
 <h1>Showing teacher corresponding to the ID provided</h1>
 
@@ -17,3 +18,6 @@
 <div>With teacher's ID of @Model.TeacherId</div>
 <div>Hired on the @Model.TeacherHireDate</div>
 <div>Having current salary of @Model.TeacherSalary $</div>
+<form action="/Teacher/EditTeacher?id=@Model.TeacherId" method="post">
+    <button>Edit</button>
+</form>

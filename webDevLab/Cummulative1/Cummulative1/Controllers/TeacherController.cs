@@ -116,5 +116,29 @@ namespace Cummulative1.Controllers
 
             return RedirectToAction("TeacherList");
         }
+
+        public ActionResult EditTeacher(int id) {
+
+            TeacherDataController ED = new TeacherDataController();
+            Teacher EDTeacher = ED.FindTeacher(id);
+
+           
+            return View(EDTeacher);
+        }
+
+        public ActionResult UpdateTeacher(int id, string TeacherFname, string TeacherLname, double TeacherSalary, DateTime TeacherHireDate) {
+
+
+            Teacher TeacherNewInfo = new Teacher();
+            TeacherNewInfo.TeacherFname = TeacherFname;
+            TeacherNewInfo.TeacherLname = TeacherLname;
+            TeacherNewInfo.TeacherSalary = TeacherSalary;
+            TeacherNewInfo.TeacherHireDate = TeacherHireDate;
+
+            TeacherDataController EDTeacher = new TeacherDataController();
+            EDTeacher.EditUpdateTeacher(id, TeacherNewInfo);
+
+            return RedirectToAction("TeacherShow/" + id);
+        }
     }
 }

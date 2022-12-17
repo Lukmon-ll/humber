@@ -157,6 +157,34 @@ namespace Cummulative1.Controllers
 
         }
 
+        [HttpGet]
+        public void EditUpdateTeacher(int id, Teacher TeacherNewInfo) {
+
+
+            Teacher newTeacher = new Teacher();
+
+
+            MySqlConnection Conn = SchoolIns.AccessDatabase();
+
+            Conn.Open();
+
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            cmd.CommandText = "update teachers set teacherfname=@teacherfname, teacherlname=@teacherlname, salary=@salary, hiredate=@hiredate where teacherid=@id";
+            cmd.Parameters.AddWithValue("@teacherfname", TeacherNewInfo.TeacherFname);
+            cmd.Parameters.AddWithValue("@teacherlname", TeacherNewInfo.TeacherLname);
+            cmd.Parameters.AddWithValue("@salary", TeacherNewInfo.TeacherSalary);
+            cmd.Parameters.AddWithValue("@hiredate", TeacherNewInfo.TeacherHireDate);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+
+            Conn.Close();
+
+
+
+        }
+
 
     }
 }
