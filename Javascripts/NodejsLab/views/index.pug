@@ -1,0 +1,26 @@
+extends layout
+
+block main-content
+  p Items categories
+  ul
+    li
+      a(href = "#") Plumbing items
+    li
+      a(href = "#") Kitchen items
+    li
+      a(href = "#") Garage items
+    li
+      a(href = "#") Handyman items
+  .search-content
+    p Put in keywords below to search for items on the website
+    form(action="")
+    input(type="text")
+    input(type="submit", value = "Search")
+  ul.image-content
+    li 
+      img(src="/image/gelato.jpeg", alt="") 
+    li
+      img(src="/image/natural.png", alt="") 
+    li
+      img(src="/image/kids.jpg", alt="")
+      

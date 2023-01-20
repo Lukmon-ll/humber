@@ -1,0 +1,32 @@
+html {
+  background-color: cornsilk;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: darkcyan;
+  color: white;
+  border: solid 0.5px;
+  border-radius: 10px 10px;
+}
+
+#header-content {
+  background-color: coral;
+  /*padding: 0.5px 0.5px;*/
+}
+
+.search-content {
+  background-color: coral;
+}
+.header-content1 {
+  color: brown;
+}
+
+img {
+  width: 20%;
+  height: 100px;
+  
+}
+
+.image-content {
+  display: inline;
+}
