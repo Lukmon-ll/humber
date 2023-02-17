@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MyPassionProject.Models.roadDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h1>List of all Roads</h1>
+@foreach (var road in Model) { 
+
+    
+    <h2>@road.streetName, which is @road.roadLength km in length</h2>
+    <h3>LGA: @road.localGovnName</h3>
+    <p>Poster's Name: @road.posterFirstName @road.posterLastName</p>
+
+}
+
