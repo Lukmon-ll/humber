@@ -1,0 +1,22 @@
+extends layout 
+
+block main-content 
+  h1 Popular Shows
+
+  ul 
+    each sp in showPopular 
+      li Title: #{sp.title}, Year: #{sp.year}
+
+  table 
+    tr 
+      th 
+        a(href = "https://imdb.com/#{showPopular.title}/#{showPopular.ids.imdb}") Show Title 
+      th Year
+    
+    each sp in showPopular 
+     tr
+      td #{sp.title}
+      td #{sp.year}
+      
+
+  
