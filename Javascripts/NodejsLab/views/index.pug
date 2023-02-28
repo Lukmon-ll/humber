@@ -1,7 +1,20 @@
 extends layout
 
 block main-content
-  p Items categories
+  div.search-form
+    form(action="")
+      input(type="text")
+      input(type="submit", value = "Search")
+
+  h2 Items categories
+
+  ul 
+    each ic in category 
+      li 
+        a(href = ic.path) #{ic.name}
+
+
+
   ul
     li
       a(href = "#") Plumbing items
@@ -12,10 +25,8 @@ block main-content
     li
       a(href = "#") Handyman items
   .search-content
-    p Put in keywords below to search for items on the website
-    form(action="")
-    input(type="text")
-    input(type="submit", value = "Search")
+  
+    
   ul.image-content
     li 
       img(src="/image/gelato.jpeg", alt="") 

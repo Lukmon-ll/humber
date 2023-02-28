@@ -6,11 +6,17 @@ html
     title #{title} - Lokolass Store
     link(rel="stylesheet", href="/style.css")
   body
-    header#header-content
-      h1.header-content1 Lokolass eCommerce Store
-      p.header-content2 This is where you can find all kinds of items ranging from the kitchen and household items to the garage items.
+    .allheader 
+      header#header-content
+        h1.header-content1 
+          a(href = "http://localhost:8888/") Lokolass eCommerce Store
+        ul.flex-container 
+          each m in menu 
+            li.flex-item 
+              a(href=m.path) #{m.name}
+      
     main
       block main-content
-    footer
+    footer#footer-content
       p &copy; Copyright Lukmon Lasisi Humber Web Dev, 2023.
     

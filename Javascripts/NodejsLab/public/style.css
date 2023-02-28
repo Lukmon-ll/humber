@@ -9,17 +9,63 @@ body {
   border-radius: 10px 10px;
 }
 
-#header-content {
+a {
+  text-decoration: none;
+  /*border: 1px solid;*/
+  /*background-color: antiquewhite;*/
+  
+}
+
+.allheader {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  margin: 10px;
+  padding: 20px;
+  float: right;
+  
+}
+
+a:hover {
+  background-color: antiquewhite;
+}
+
+header-content1:hover {
+  background: none;
+}
+
+#header-content, #footer-content {
   background-color: coral;
+  padding: 2px 4px;
+  color: brown;
+
+  /*text-align: center;*/
+
   /*padding: 0.5px 0.5px;*/
 }
 
+.search-form {
+  text-align: center;
+
+}
+
+/*#footer-content {
+  padding: 2px 4px;
+}*/
+
+/*
 .search-content {
-  background-color: coral;
-}
-.header-content1 {
+  
+}*/
+/*.header-content1 {
   color: brown;
-}
+
+}*/
 
 img {
   width: 20%;
