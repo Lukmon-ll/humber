@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MyPassionProject"
+    "\\MyPassionProject",
+    "\\MyPassionProject\\Controllers",
+    "\\MyPassionProject\\Views",
+    "\\MyPassionProject\\Views\\roadsConn"
   ],
-  "SelectedNode": "\\MyPassionProject.sln",
+  "SelectedNode": "\\MyPassionProject\\Controllers\\roadsDataController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -3,9 +3,21 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h3>Road details</h3>
 
-<h1>@Model.roadLength</h1>
+
+<div>POSTER NAME: @Model.posterFirstName @Model.posterLastName</div>
+<div>STREET NAME: @Model.streetName, which is @Model.roadLength km in length</div>
+<div>STATUS: @Model.roadStatus</div>
+<div>LGA: @Model.localGovnName</div><br/>
+
+
+<div>
+    <a id="edit" href="/roadsConn/Edit/@Model.roadId">Edit</a> <a href="/roadsConn/List">Go back to list</a>
+
+</div>
+
+
 
 
 

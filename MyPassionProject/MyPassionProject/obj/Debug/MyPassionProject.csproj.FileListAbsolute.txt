@@ -246,3 +246,4 @@ C:\Users\olasi\Documents\HumberRepo\humber\MyPassionProject\MyPassionProject\obj
 C:\Users\olasi\Documents\HumberRepo\humber\MyPassionProject\MyPassionProject\obj\Debug\MyPassionProject.csproj.CopyComplete
 C:\Users\olasi\Documents\HumberRepo\humber\MyPassionProject\MyPassionProject\obj\Debug\MyPassionProject.dll
 C:\Users\olasi\Documents\HumberRepo\humber\MyPassionProject\MyPassionProject\obj\Debug\MyPassionProject.pdb
+C:\Users\olasi\Documents\HumberRepo\humber\MyPassionProject\MyPassionProject\obj\Debug\MyPassionProject.Migrations.roadStatusAdded.resources

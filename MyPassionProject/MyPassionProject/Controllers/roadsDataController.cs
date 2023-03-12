@@ -31,6 +31,7 @@ namespace MyPassionProject.Controllers
                 streetName = r.streetName,
                 roadLength = r.roadLength,
                 roadImage = r.roadImage,
+                roadStatus = r.roadStatus,
                 localGovnName = r.localGovn.localGovnName
 
             }));
@@ -51,6 +52,8 @@ namespace MyPassionProject.Controllers
                 streetName = road.streetName,
                 roadLength = road.roadLength,
                 roadImage = road.roadImage,
+                roadId = road.roadId,
+                roadStatus = road.roadStatus,
                 localGovnName = road.localGovn.localGovnName
             };
 

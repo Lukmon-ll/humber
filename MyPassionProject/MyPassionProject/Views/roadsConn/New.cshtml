@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MyPassionProject.Models.roadDto>
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add road</h2>
+
+<form action="/roadsConn/Create" method="POST">
+    <div>
+        <label>First name:</label> <input type="text" name="posterFirstName" />
+    </div>
+    <div>
+        <label>Last name:</label> <input type="text" name="posterLastName" />
+    </div>
+    <div>
+        <label>Street Name:</label> <input type="text" name="streetName" />
+    </div>
+    <div>
+        <label>Status:</label> <input type="text" name="roadStatus" />
+    </div>
+    <div>
+        <label>Length (km):</label> <input type="number" name="roadLength" />
+    </div>
+    <div>
+        <label>LGid:</label> <input type="number" name="localGovnId" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add Road" />
+
+    </div>
+</form>
+

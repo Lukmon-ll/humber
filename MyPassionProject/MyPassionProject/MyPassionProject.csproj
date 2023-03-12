@@ -225,6 +225,10 @@
     <Compile Include="Migrations\202302142045254_addedColumn.designer.cs">
       <DependentUpon>202302142045254_addedColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302212331217_roadStatusAdded.cs" />
+    <Compile Include="Migrations\202302212331217_roadStatusAdded.designer.cs">
+      <DependentUpon>202302212331217_roadStatusAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Company.cs" />
@@ -294,6 +298,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\roadsConn\List.cshtml" />
     <Content Include="Views\roadsConn\Details.cshtml" />
+    <Content Include="Views\roadsConn\New.cshtml" />
+    <Content Include="Views\roadsConn\Create.cshtml" />
+    <Content Include="Views\roadsConn\Edit.cshtml" />
+    <Content Include="Views\roadsConn\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -338,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302142045254_addedColumn.resx">
       <DependentUpon>202302142045254_addedColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302212331217_roadStatusAdded.resx">
+      <DependentUpon>202302212331217_roadStatusAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

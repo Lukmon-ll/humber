@@ -1,0 +1,36 @@
+﻿@model MyPassionProject.Models.roadDto
+
+
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/roadsConn/Update/" method="POST">
+    <div>
+        <label>First name:</label> <input type="text" name="posterFirstName" placeholder="" />
+    </div>
+    <div>
+        <label>Last name:</label> <input type="text" name="posterLastName" placeholder="posterLastName" />
+    </div>
+    <div>
+        <label>Street Name:</label> <input type="text" name="streetName" placeholder="streetName" />
+    </div>
+
+    <div>
+        <label>Status:</label> <input type="text" name="roadStatus" placeholder="roadStatus" />
+    </div>
+    <div>
+        <label>Length (km):</label> <input type="number" name="roadLength" placeholder="roadLength" />
+    </div>
+    <div>
+        <label>LGid:</label> <input type="number" name="localGovnId" placeholder="roadId" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update" />
+
+    </div>
+</form>

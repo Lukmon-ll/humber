@@ -28,3 +28,17 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+.anchorNav {
+    border: solid 1px;
+    background-color: darkgreen;
+    padding: 2px;
+    color: white;
+
+}
+
+#edit {
+    color: darkgreen;
+    padding-right: 10px;
+
+}

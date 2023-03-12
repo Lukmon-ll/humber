@@ -20,6 +20,8 @@ namespace MyPassionProject.Models
 
         public string roadImage { get; set; }
 
+        public string roadStatus { get; set; }
+
 
 
         //a road is in one local government
@@ -49,6 +51,8 @@ namespace MyPassionProject.Models
         public int roadLength { get; set; }
 
         public string roadImage { get; set; }
+
+        public string roadStatus { get; set; }
 
     }
 }
