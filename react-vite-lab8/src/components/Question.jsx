@@ -37,11 +37,11 @@ export default function() {
 
   return(
 
-    <div>
+    <div className="question">
       <div>{category}</div>
       <h3>{question}</h3>
       <div>{Answer}</div>
-      <button onClick={handler}>Reveal Answer</button>
+      <button id="btn" onClick={handler}>Reveal Answer</button>
     </div>
   );
 }
