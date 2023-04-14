@@ -1,0 +1,15 @@
+extends layout 
+
+block main-content 
+  p.site-intro Welcome to Ontario parks weather website.
+
+  h2 Parks in Ontario:
+
+  ul
+    each park, index in parks
+      li.park-list
+       - url = `/weather?id1=${park.lat}?id2=${park.long}`
+        a(href=url) #{park.name}
+        
+
+  

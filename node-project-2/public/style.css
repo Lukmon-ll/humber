@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Apply the font to all body text */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Apply the font to a specific element */
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+#main-header {
+  background-color: #317773;
+  padding: 50px 0;
+  text-align: center;
+  
+}
+
+#footer-content {
+  background-color: #317773;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#back-nav {
+  text-align: right;
+}
+
+.park-list {
+  padding: 5px;
+}
+
+
+
