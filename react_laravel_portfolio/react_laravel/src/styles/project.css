@@ -1,0 +1,22 @@
+/* apply styles to every other div */
+#project-content {
+  text-align: center;
+}
+
+#project-heading {
+  text-align: left;
+}
+
+.Iproject:nth-child(even) {
+  background-color: #EEA47FFF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* apply styles to odd-numbered divs */
+.Iproject:nth-child(odd) {
+  background-color: #FCF6F5FF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}
