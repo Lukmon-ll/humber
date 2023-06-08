@@ -1,0 +1,21 @@
+block variables 
+
+doctype html 
+html 
+  head
+    meta(charset="utf-8")
+    title #{title} | Ontario Parks 
+    link(rel="stylesheet", href="/style.css", type="text/css")
+  body 
+    header#main-header 
+      .header-content 
+        h2.main-header
+          a(href="/") Ontario Parks Real-Time Weather 
+      
+
+    main#main-content 
+      block main-content
+
+    footer#footer-content
+      h2 
+        a(href="http://lukmon.epizy.com/edupage.php") &copy; CopyRight Lukmon L.O, 2023.

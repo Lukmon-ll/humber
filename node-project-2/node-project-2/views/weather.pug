@@ -1,0 +1,46 @@
+extends layout 
+
+block main-content 
+  h2#back-nav
+    a(href="/") Back to list of parks
+
+  h2.weather-page-heading Parks Weather condition
+  
+  div.map-content
+    iframe(src=map, frameborder="0", width=400, height=360) 
+
+  .specific-weather 
+    p.weather-content Country: 
+      b #{weather.sys.country}
+    p.weather-content Location:  
+      b #{weather.name}
+    p.weather-content Timezone:  
+      b #{weather.timezone}
+    p.weather-content Weather Visibility at Park:  
+      b #{weather.visibility}
+    p.weather-content Wind Speed at Park:  
+      b #{weather.wind.speed} m/s
+    p.weather-content Current Temperature at Park: 
+      b #{weather.main.temp} Kelvin
+    p.weather-content Today's Maximum Temperature at Park: 
+      b #{weather.main.temp_max} Kelvin 
+    p.weather-content Feels-Like Temperature at Park: 
+      b #{weather.main.feels_like} Kelvin
+    p.weather-content Summary: 
+      b There will be a  
+      b #{weather.weather[0].description} with humidity of 
+      b #{weather.main.humidity}, and obviously the sun is likely to set at 
+      b #{weather.sys.sunset}.
+
+    
+    
+    
+    
+    
+    
+    
+
+
+   
+    
+    

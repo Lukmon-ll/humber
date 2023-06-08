@@ -1,0 +1,21 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "node website that consume 2 APIs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "author": "Lukmon Lasisi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "nodemon": "^2.0.22"
+  }
+}
