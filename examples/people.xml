@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Example of an inline DTD here -->
+
+<people>
+  <person id="1" salutation="Mr" job="accountant">
+    <name>
+      <first>John</first>
+      <middle>James</middle>
+      <last>Doe</last>
+    </name>
+    <bio>This is just some tet.</bio>
+  </person>
+  <person id="2" salutation="Mr" job="wizard">
+    <name>
+      <first>Harry</first>
+      <last>Potter</last>
+    </name>
+  </person>
+  <person id="3" salutation="Miss" job="engineer">
+    <name>
+      <first>Jane</first>
+      <last>Smith</last>
+    </name>
+  </person>
+</people>

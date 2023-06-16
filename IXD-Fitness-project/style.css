@@ -1,0 +1,132 @@
+html {
+font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+body {
+  
+  padding-left: 25%;
+  padding-right: 25%;
+  color: #75120D;
+
+}
+
+a {
+  color: red;
+}
+
+#SR {
+  font-size: medium;
+  padding-left: 5px;
+}
+
+.heading-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #FCF6F5FF;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.heading-content-item {
+  flex: 1 0 auto;
+}
+
+.heading-content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.heading-content-item2 {
+  /*flex: 1 0 auto;*/
+  justify-content: center;
+  
+  
+}
+
+#on {
+  font-size: medium;
+  text-align: right;
+}
+
+#hci1 {
+  text-align: left;
+}
+
+#hci2 {
+  text-align: right;
+}
+
+.heading-content2:hover {
+  border: 1px solid red;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.sub-container1 {
+  flex: 1 0 auto;
+}
+
+.last-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.last-container-item {
+  flex: 1 0 auto;
+ 
+}
+
+img {
+  /* Default styles for the image */
+  
+  height: auto;
+  
+}
+
+.image-content {
+  width: 221px;
+}
+
+img:hover {
+  /* Styles applied when the user hovers over the image */
+  opacity: 0.8;
+  cursor: pointer;
+  border: solid 5px red;
+}
+
+.last-container {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 2px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+

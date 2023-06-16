@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaijaCA-Forum", "NaijaCA-Forum\NaijaCA-Forum.csproj", "{998C44AD-9C95-472B-A322-FA7EC0A6072B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{998C44AD-9C95-472B-A322-FA7EC0A6072B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998C44AD-9C95-472B-A322-FA7EC0A6072B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998C44AD-9C95-472B-A322-FA7EC0A6072B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998C44AD-9C95-472B-A322-FA7EC0A6072B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76E2C810-DD7B-40FF-9403-AC4489DD2704}
+	EndGlobalSection
+EndGlobal

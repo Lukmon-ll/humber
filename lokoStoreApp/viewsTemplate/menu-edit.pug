@@ -1,0 +1,23 @@
+extends layout
+
+block main-content 
+  h1.page-title Edit menu link
+  form(method="post", action="/admin/menu/edit/submit")
+    input(type="hidden", name="linkId", value=editLink._id)
+
+    div 
+      label(for = "wgt") weight: 
+      input(type = "number", id = "wgt", name = "weight", placeholder = editLink.weight)
+      -//add label/input for the weight prepopulated with the selected link's weight
+
+    div 
+      label(for = "path") path:
+      input(type="text", id = "path", name = "path", placeholder = editLink.path)
+      -//add label/input for the path (pre-populated)
+
+    div 
+      label(for="name") name:
+      input(type="text", id = "name", name = "name", placeholder = editLink.name)
+      -//add label/input for the name (prepopulated)
+
+    button(type="submit") Update link

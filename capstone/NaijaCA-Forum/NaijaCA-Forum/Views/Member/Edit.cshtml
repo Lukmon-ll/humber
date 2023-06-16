@@ -1,0 +1,58 @@
+﻿@model NaijaCA_Forum.Models.MemberDto
+     
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Member</h2>
+
+
+
+<form action="/member/update/@Model.MemberID" method="POST">
+
+    <!--<div>
+        <label for="MemberID">MemberID: </label>  <input type="number" name="MemberID" value=@Model.MemberID />
+    </div>-->
+    
+
+    <div>
+        <label for="FirstName">First Name: </label>  <input type="text" name="FirstName" value=@Model.FirstName />
+    </div>
+    <div>
+        <label for="LastName">Last Name: </label>  <input type="text" name="LastName" value=@Model.LastName />
+    </div>
+    <div>
+        <label for="UserName">Username: </label>  <input type="text" name="UserName" value=@Model.UserName />
+    </div>
+    <!-- <div>
+         <label for="ProvinceName">ProvinceName: </label>  <input type="text" name="ProvinceName" value=@Model.ProvinceName />
+     </div>
+     <div>
+         <label for="CityName">CityName: </label>  <input type="text" name="CityName" value=@Model.CityName />
+     </div>-->
+    <div>
+        <label for="ProvinceID">ProvinceID: </label>  <input type="number" name="ProvinceID" value=@Model.ProvinceID />
+    </div>
+    <div>
+        <label for="CityID">CityID: </label>  <input type="number" name="CityID" value=@Model.CityID />
+    </div>
+    <div>
+        <label for="LandedDate">Landed Date: </label>  <input type="datetime" name="LandedDate" value=@Model.LandedDate />
+    </div>
+    <div>
+        <label for="FavouriteQuote">Favourite Quote: </label>  <input type="text" name="FavouriteQuote" value=@Model.FavouriteQuote />
+    </div>
+    <div>
+        <label for="Comment">Comment: </label>  <input type="text" name="Comment" value=@Model.Comment />
+    </div>
+
+    <div>
+
+        <input type="submit" name="" value="Update Member" />
+    </div>
+
+
+
+</form>
+

@@ -1,0 +1,19 @@
+﻿@model NaijaCA_Forum.Models.MemberDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Member Details</h2>
+
+<div>Profile Picture: @Model.ProfilePic</div>
+
+<div>Username: @Model.UserName</div>
+<div>Name: @Model.FirstName @Model.LastName</div>
+<div>Province: @Model.ProvinceName</div>
+<div>City: @Model.CityName</div>
+<div>Date Landed: @Model.LandedDate</div>
+<div>Favourite Quote: @Model.FavouriteQuote</div>
+<div>Comment (Optional): @Model.Comment</div>
+
+

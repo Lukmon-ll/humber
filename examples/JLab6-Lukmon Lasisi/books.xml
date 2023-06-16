@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE books SYSTEM "booksdtd.dtd">
+
+<books>
+  <book id = "1">
+     <ISBN>1234567890</ISBN>
+     <Title>The Great Gatsby</Title>
+     <YearPublished>1925</YearPublished>
+     <Author>F. Scott Fitzgerald</Author>
+     <Language country="uk">English</Language>
+  </book>
+  <book id = "2">
+     <ISBN>0987654321</ISBN>
+     <Title>Eye of the people</Title>
+     <YearPublished>1951</YearPublished>
+     <Author>J.D. Tutu</Author>
+     <Language country="us">English</Language>
+  </book>
+</books>

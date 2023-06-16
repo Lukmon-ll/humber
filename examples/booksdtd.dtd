@@ -1,0 +1,18 @@
+
+    <!ELEMENT books (book+)>
+    <!ELEMENT book (ISBN, Title, YearPublished, Author, Language)>
+    <!ELEMENT ISBN (#PCDATA)>
+    <!ELEMENT Title (#PCDATA)>
+    <!ELEMENT YearPublished (#PCDATA)>
+    <!ELEMENT Author (#PCDATA)>
+    <!ELEMENT Language (#PCDATA)>
+    <!ATTLIST Language
+    
+    country CDATA #REQUIRED
+    >
+    <!ATTLIST book 
+    id CDATA #IMPLIED
+    
+    >
+
+    

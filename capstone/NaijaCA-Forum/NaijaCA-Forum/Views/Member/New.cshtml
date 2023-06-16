@@ -1,0 +1,44 @@
+﻿@model NaijaCA_Forum.Models.MemberDto
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add New Member</h2>
+
+<form action="/member/create" method="POST">
+
+    <div>
+        <label for="FirstName">First Name: </label>  <input type="text" name="FirstName" value="" id="FirstName" />
+    </div>
+    <div>
+        <label for="LastName">Last Name: </label>  <input type="text" name="LastName" value="" id="LastName" />
+    </div>
+    <div>
+        <label for="UserName">Username: </label>  <input type="text" name="UserName" value="" id="UserName" />
+    </div>
+    <div>
+        <label for="ProvinceID">ProvinceID: </label>  <input type="number" name="ProvinceID" value="" id="ProvinceID" />
+    </div>
+    <div>
+        <label for="CityID">CityID: </label>  <input type="number" name="CityID" value="" id="CityID" />
+    </div>
+    <div>
+        <label for="LandedDate">Landed Date: </label>  <input type="datetime" name="LandedDate" value="" id="LandedDate" />
+    </div>
+    <div>
+        <label for="FavouriteQuote">Favourite Quote: </label>  <input type="text" name="FavouriteQuote" value="" id="FavouriteQuote" />
+    </div>
+    <div>
+        <label for="Comment">Comment: </label>  <input type="text" name="Comment" value="" id="Comment" />
+    </div>
+
+    <div>
+
+        <input type="submit" name="" value="Add Member" />
+    </div>
+
+</form>
+
+
+

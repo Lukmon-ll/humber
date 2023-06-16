@@ -1,0 +1,21 @@
+﻿@model IEnumerable<NaijaCA_Forum.Models.MemberDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+@foreach (var member in Model)
+{
+    <div>@member.ProfilePic</div>
+
+    <div>Name: @member.FirstName @member.LastName</div>
+    <div>Province: @member.ProvinceName</div>
+    <div>City: @member.CityName</div>
+    <div>Date Landed: @member.LandedDate</div>
+    <div>Favourite Quote: @member.FavouriteQuote</div>
+    <div>Comment (Optional): @member.Comment</div>
+    <br>
+    
+}
+
