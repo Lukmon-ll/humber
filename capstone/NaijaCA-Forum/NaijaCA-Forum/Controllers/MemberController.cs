@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using NaijaCA_Forum.Models;
 using System.Web.Script.Serialization;
+using NaijaCA_Forum.Models.ViewModels;
 
 namespace NaijaCA_Forum.Controllers
 {
@@ -24,11 +25,19 @@ namespace NaijaCA_Forum.Controllers
 
             HttpResponseMessage response = client.GetAsync(url).Result;
 
-            //Console.WriteLine("The response status is: ");
-            //Console.WriteLine(response.StatusCode);
+            //Debug.WriteLine("The response status is: ");
+            //Debug.WriteLine(response.StatusCode);
 
             IEnumerable<MemberDto> Members = response.Content.ReadAsAsync<IEnumerable<MemberDto>>().Result;
-            //Console.WriteLine(Members);
+
+            int memberCount = Members.Count();
+            ViewBag.MemberCount = memberCount;
+            
+            Debug.WriteLine(memberCount);
+
+            
+
+            
 
             return View(Members);
         }
@@ -41,11 +50,11 @@ namespace NaijaCA_Forum.Controllers
 
             HttpResponseMessage response = client.GetAsync(url).Result;
 
-            //Console.WriteLine("The response status is: ");
-            //Console.WriteLine(response.StatusCode);
+            //Debug.WriteLine("The response status is: ");
+            //Debug.WriteLine(response.StatusCode);
 
             MemberDto Member = response.Content.ReadAsAsync<MemberDto>().Result;
-            //Console.WriteLine(Members);
+            //Debug.WriteLine(Members);
 
             return View(Member);
         }
@@ -56,11 +65,59 @@ namespace NaijaCA_Forum.Controllers
 
         }
 
+        public ActionResult Resources() {
+
+            return View();
+        }
+
+        public ActionResult BecomeAMember() {
+
+            return View();
+        }
+
 
         // GET: Member/New
         public ActionResult New()
         {
-            return View();
+
+            ProvinceCity ViewModel = new ProvinceCity();
+
+            Member Member = new Member();
+
+            ViewModel.Member = Member;
+
+            //Debug.WriteLine(Member.FirstName);
+            
+
+            //Establish connection to list Provinces
+            HttpClient client = new HttpClient();
+            string url = "https://localhost:44327/api/provincedata/listprovinces";
+
+            HttpResponseMessage response = client.GetAsync(url).Result;
+
+            //Console.WriteLine("The response status is: ");
+            //Console.WriteLine(response.StatusCode);
+
+            IEnumerable<Province> ProvinceOptions = response.Content.ReadAsAsync<IEnumerable<Province>>().Result;
+            
+            ViewModel.ProvinceOptions = ProvinceOptions;
+
+
+
+            //Establish connection to list Cities
+            HttpClient client1 = new HttpClient();
+            string url1 = "https://localhost:44327/api/citydata/listcities";
+
+            HttpResponseMessage response1 = client1.GetAsync(url1).Result;
+
+            //Console.WriteLine("The response status is: ");
+            //Console.WriteLine(response.StatusCode);
+
+            IEnumerable<City> CityOptions = response1.Content.ReadAsAsync<IEnumerable<City>>().Result;
+            
+            ViewModel.CityOptions = CityOptions;
+
+            return View(ViewModel);
         }
 
         // POST: Member/Create
@@ -98,6 +155,8 @@ namespace NaijaCA_Forum.Controllers
         // GET: Member/Edit/5
         public ActionResult Edit(int id)
         {
+            ProvinceCityUpdate ViewModel = new ProvinceCityUpdate();
+
             HttpClient client = new HttpClient();
             string url = "https://localhost:44327/api/memberdata/findmember/" + id;
 
@@ -107,11 +166,40 @@ namespace NaijaCA_Forum.Controllers
             //Console.WriteLine(response.StatusCode);
 
             MemberDto SelectedMember = response.Content.ReadAsAsync<MemberDto>().Result;
+            ViewModel.SelectedMember = SelectedMember;  
             
-            Debug.WriteLine(SelectedMember.MemberID);
-            
+            //Debug.WriteLine(SelectedMember.MemberID);
 
-            return View(SelectedMember);
+            //Establish connection to list provinces
+
+            HttpClient client2 = new HttpClient();
+            string url2 = "https://localhost:44327/api/provincedata/listprovinces";
+
+            HttpResponseMessage response2 = client2.GetAsync(url2).Result;
+
+            //Console.WriteLine("The response status is: ");
+            //Console.WriteLine(response.StatusCode);
+
+            IEnumerable<Province> ProvinceOptions2 = response2.Content.ReadAsAsync<IEnumerable<Province>>().Result;
+
+            ViewModel.ProvinceOptions2 = ProvinceOptions2;
+
+            //Establish connection to list cities 
+
+            HttpClient client3 = new HttpClient();
+            string url3 = "https://localhost:44327/api/citydata/listcities";
+
+            HttpResponseMessage response3 = client3.GetAsync(url3).Result;
+
+            //Console.WriteLine("The response status is: ");
+            //Console.WriteLine(response.StatusCode);
+
+            IEnumerable<City> CityOptions2 = response3.Content.ReadAsAsync<IEnumerable<City>>().Result;
+
+            ViewModel.CityOptions2 = CityOptions2;
+
+
+            return View(ViewModel);
         }
 
         // POST: Member/Update/5

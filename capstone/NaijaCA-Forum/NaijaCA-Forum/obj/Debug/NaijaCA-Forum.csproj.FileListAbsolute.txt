@@ -122,3 +122,5 @@ C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\
 C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\obj\Debug\NaijaCA_Forum.Migrations.cityforeignkeyaddTomembers.resources
 C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\obj\Debug\NaijaCA_Forum.Migrations.threadtablecreation.resources
 C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\obj\Debug\NaijaCA_Forum.Migrations.threadtablecreation1.resources
+C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\obj\Debug\NaijaCA_Forum.Migrations.titleaddedthread.resources
+C:\Users\olasi\Documents\HumberRepo\humber\capstone\NaijaCA-Forum\NaijaCA-Forum\obj\Debug\NaijaCA_Forum.Migrations.datetimeupdated.resources

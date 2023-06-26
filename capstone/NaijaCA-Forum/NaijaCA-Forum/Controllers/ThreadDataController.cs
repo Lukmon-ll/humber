@@ -27,7 +27,9 @@ namespace NaijaCA_Forum.Controllers
             Threads.ForEach(
                 t=> ThreadDtos.Add(new ThreadDto() { 
                     ThreadID = t.ThreadID,
+                    MemberID = t.MemberID,
                     UserName = t.Member.UserName,
+                    Title = t.Title,
                     FavouriteQuote = t.Member.FavouriteQuote,
                     ThreadComment = t.ThreadComment
                 }) 
@@ -48,7 +50,9 @@ namespace NaijaCA_Forum.Controllers
             ThreadDto ThreadDto = new ThreadDto()
             {
                 ThreadID = Thread.ThreadID,
+                MemberID = Thread.MemberID,
                 UserName = Thread.Member.UserName,
+                Title = Thread.Title,
                 FavouriteQuote = Thread.Member.FavouriteQuote,
                 ThreadComment = Thread.ThreadComment
 

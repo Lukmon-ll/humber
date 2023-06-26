@@ -18,6 +18,8 @@ namespace NaijaCA_Forum.Models
         //For explicit navigation declaration
         public virtual Member Member { get; set; }
 
+        public string Title { get; set; }
+
         public string ThreadComment { get; set; }
 
         
@@ -27,6 +29,8 @@ namespace NaijaCA_Forum.Models
 
         public int ThreadID { get; set; }
         public string ThreadComment { get; set; }
+
+        public string Title { get; set; }
 
         public int MemberID { get; set; }
 

@@ -1,0 +1,23 @@
+﻿@model NaijaCA_Forum.Models.ThreadDto
+
+@{
+    ViewBag.Title = "DeletePrompt";
+}
+
+<h2>Delete Comment @Model.UserName</h2>
+
+<div>
+    Please confirm to delete @Model.UserName's Comment!!!
+</div>
+
+<br />
+
+<form action="/thread/delete/@Model.ThreadID" method="post">
+    <button>Delete</button>
+</form>
+
+<br>
+
+<div>
+    <a href="/thread/details/@Model.ThreadID">Cancel</a>
+</div>

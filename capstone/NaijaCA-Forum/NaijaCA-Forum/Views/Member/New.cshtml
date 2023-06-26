@@ -1,12 +1,14 @@
-﻿@model NaijaCA_Forum.Models.MemberDto
+﻿@model NaijaCA_Forum.Models.ViewModels.ProvinceCity
 
 @{
     ViewBag.Title = "New";
 }
 
-<h2>Add New Member</h2>
+<h2 class="member-new-heading">Create Member Profile</h2>
+<hr />
 
-<form action="/member/create" method="POST">
+<br />
+<form action="/member/create" method="POST" name="memberNewForm">
 
     <div>
         <label for="FirstName">First Name: </label>  <input type="text" name="FirstName" value="" id="FirstName" />
@@ -17,28 +19,59 @@
     <div>
         <label for="UserName">Username: </label>  <input type="text" name="UserName" value="" id="UserName" />
     </div>
-    <div>
-        <label for="ProvinceID">ProvinceID: </label>  <input type="number" name="ProvinceID" value="" id="ProvinceID" />
-    </div>
-    <div>
-        <label for="CityID">CityID: </label>  <input type="number" name="CityID" value="" id="CityID" />
-    </div>
-    <div>
-        <label for="LandedDate">Landed Date: </label>  <input type="datetime" name="LandedDate" value="" id="LandedDate" />
-    </div>
-    <div>
-        <label for="FavouriteQuote">Favourite Quote: </label>  <input type="text" name="FavouriteQuote" value="" id="FavouriteQuote" />
-    </div>
-    <div>
-        <label for="Comment">Comment: </label>  <input type="text" name="Comment" value="" id="Comment" />
-    </div>
 
     <div>
+        <label for="ProvinceID">Province: </label>
 
-        <input type="submit" name="" value="Add Member" />
+        <select name="ProvinceID">
+            @foreach (var province in Model.ProvinceOptions)
+            {
+
+                <option value="@province.ProvinceID">@province.ProvinceName</option>
+
+            }
+
+        </select>
+    </div>
+    <div>
+        <label for="CityID">City: </label>
+
+        <select name="CityID">
+            @foreach (var city in Model.CityOptions)
+            {
+
+                <option value="@city.CityID">@city.CityName</option>
+
+            }
+
+        </select>
+    </div>
+    <div>
+        <label for="LandedDate">Landed Date: </label>  <input type="date" name="LandedDate" value="" id="LandedDate" />
+    </div>
+    <div>
+        <label for="FavouriteQuote">Favourite Quote: </label>  <textarea type="text" name="FavouriteQuote" value="" id="FavouriteQuote"></textarea>
+    </div>
+    <div>
+        <label for="Comment">Comment: </label>  <textarea type="text" name="Comment" value="" id="Comment"></textarea>
+    </div>
+    <br />
+
+    <div>
+        <label for="pic">Upload Picture</label> <input type="file" name="ProfilePic" value="" id="pic" />
+    </div>
+
+    <br />
+
+    <div>
+        <input type="submit" name="" value="Create Profile" />
     </div>
 
 </form>
+
+<br />
+
+
 
 
 

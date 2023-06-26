@@ -1,0 +1,50 @@
+﻿@model NaijaCA_Forum.Models.ViewModels.ThreadMember
+
+@{
+    ViewBag.Title = "New";
+}
+
+
+<h2 class="thread-new-heading">Create New Thread</h2>
+
+<hr />
+<br />
+
+<div id="details-nav"><a href="/member/list">Back</a></div>
+
+
+<form action="/thread/create" method="POST">
+
+
+    <div>
+        <label for="MemberID">Username: </label>
+
+        <select name="MemberID">
+            @foreach (var m in Model.UsernameOptions)
+            {
+
+                <option value="@m.MemberID">@m.UserName</option>
+
+            }
+
+        </select>
+    </div>
+
+    <div>
+        <label for="Title">Title: </label>  <textarea type="text" name="Title" value="" id="Title"></textarea>
+    </div>
+
+
+    <div>
+        <label for="Comment">Comment: </label>  <textarea type="text" name="ThreadComment" value="" id="Comment"></textarea>
+    </div>
+    <br />
+
+    <div>
+        <input type="submit" name="" value="Create Thread" />
+    </div>
+
+</form>
+
+
+

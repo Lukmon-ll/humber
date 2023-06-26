@@ -36,10 +36,13 @@ namespace NaijaCA_Forum.Controllers
                 FavouriteQuote = m.FavouriteQuote,
                 Comment = m.Comment,
                 ProvinceName = m.Province.ProvinceName,
-                CityName = m.City.CityName
+                CityName = m.City.CityName,
+                ProfilePic = m.ProfilePic
 
                 })
                 );
+
+            
 
 
             return MemberDtos;
@@ -63,7 +66,8 @@ namespace NaijaCA_Forum.Controllers
                 ProvinceName = Member.Province.ProvinceName,
                 CityName = Member.City.CityName,
                 ProvinceID = Member.ProvinceID,
-                CityID = Member.CityID
+                CityID = Member.CityID,
+                ProfilePic = Member.ProfilePic
             };
 
             if (Member == null)

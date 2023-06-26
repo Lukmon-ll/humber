@@ -4,16 +4,45 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Member Details</h2>
 
-<div>Profile Picture: @Model.ProfilePic</div>
 
-<div>Username: @Model.UserName</div>
-<div>Name: @Model.FirstName @Model.LastName</div>
-<div>Province: @Model.ProvinceName</div>
-<div>City: @Model.CityName</div>
-<div>Date Landed: @Model.LandedDate</div>
-<div>Favourite Quote: @Model.FavouriteQuote</div>
-<div>Comment (Optional): @Model.Comment</div>
+<h2 class="member-details-heading">Profile Details</h2>
+<hr />
+
+<br />
+
+
+<div id="details-nav"><a href="/member/list">Back</a></div>
+
+<h2>@Model.FirstName's Details</h2>
+
+
+
+<div><strong>Username:</strong> @Model.UserName</div>
+<div><strong>First Name:</strong> @Model.FirstName</div>
+<div><strong>Last Name:</strong> @Model.LastName</div>
+<div><strong>Province:</strong> @Model.ProvinceName</div>
+<div><strong>City:</strong> @Model.CityName</div>
+<div><strong>Date Landed:</strong> @Model.LandedDate</div>
+<div><strong>Favourite Quote:</strong> @Model.FavouriteQuote</div>
+<div><strong>Comment (Optional):</strong> @Model.Comment</div>
+
+<br />
+
+<form action="/member/edit/@Model.MemberID" method="post">
+    <button>Edit Member</button>
+</form>
+
+<br />
+
+<form action="/member/deleteprompt/@Model.MemberID" method="post">
+    <button class="delete-btn">Delete Member</button>
+</form>
+
+
+
+
+
+
 
 

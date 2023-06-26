@@ -28,3 +28,87 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+#logo {
+    text-align: center;
+}
+
+.member-list-heading {
+text-align: center;
+}
+
+.member-new-heading {
+    text-align: center;
+}
+
+.member-details-heading {
+    text-align: center;
+}
+
+.thread-new-heading {
+text-align: center;
+}
+
+
+
+.member-list-container {
+    display: flex;
+    border: 2px solid #990011;
+    border-radius: 5px;
+    padding: 10px
+}
+
+.member-list-item {
+flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 5px #66afe9;
+    }
+
+.delete-btn {
+background-color: red;
+color: white;
+}
+
+#details-nav {
+text-align: right;
+}
+
+#member-thread-nav {
+color: darkgreen;
+
+}
+
+.thread-list-heading {
+text-align: center;
+}
+
+.thread-list-body {
+    border: 2px solid #990011;
+    border-radius: 5px;
+    padding: 10px;
+    
+
+}
+
+#thread-comment {
+    color: darkgreen;
+}

@@ -1,0 +1,35 @@
+﻿@model NaijaCA_Forum.Models.ThreadDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <a href="/thread/list">Back to Threads</a>
+</div>
+
+<h2>Thread Details</h2>
+
+<div>Username: @Model.UserName</div>
+
+<div>Title: @Model.Title</div>
+
+<div>Comment: @Model.ThreadComment</div>
+
+<br />
+
+
+<form action="/thread/deleteprompt/@Model.ThreadID" method="post">
+    <button>Delete Thread</button>
+</form>
+
+<br />
+
+<form action="/thread/edit/@Model.ThreadID" method="post">
+    <button>Edit Thread</button>
+</form>
+
+<br />
+
+
+

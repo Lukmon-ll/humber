@@ -17,7 +17,7 @@ namespace NaijaCA_Forum.Models
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime LandedDate { get; set; }
+        public DateTime? LandedDate { get; set; }
         public string FavouriteQuote { get; set; }
         public string Comment { get; set; }
 
@@ -44,7 +44,7 @@ namespace NaijaCA_Forum.Models
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime LandedDate { get; set; }
+        public DateTime? LandedDate { get; set; }
         public string FavouriteQuote { get; set; }
         public string Comment { get; set; }
 

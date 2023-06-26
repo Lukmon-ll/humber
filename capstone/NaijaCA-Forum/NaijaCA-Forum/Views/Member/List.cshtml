@@ -4,18 +4,43 @@
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
+
+<h1 class="member-list-heading">NaijaCA Forum Members</h1>
+<hr />
+
+<br />
+<br />
+
+Member Count: <strong>@ViewBag.MemberCount</strong>
+
 @foreach (var member in Model)
 {
-    <div>@member.ProfilePic</div>
+    <!--<div><img src="@member.ProfilePic" alt="Alternate Text" /></div>-->
+<div class="member-list-container">
+    <div class="member-list-item"><img src="../images/profile.png" alt="Alternate Text" /></div>
 
-    <div>Name: @member.FirstName @member.LastName</div>
-    <div>Province: @member.ProvinceName</div>
-    <div>City: @member.CityName</div>
-    <div>Date Landed: @member.LandedDate</div>
-    <div>Favourite Quote: @member.FavouriteQuote</div>
-    <div>Comment (Optional): @member.Comment</div>
+    <div class="member-list-item">
+        <div><strong>Name:</strong>  <a href="/member/details/@member.MemberID">@member.FirstName @member.LastName</a> </div>
+        <br />
+        <div><strong>Province:</strong> @member.ProvinceName</div>
+        <br />
+        <div><strong>City:</strong> @member.CityName</div>
+        <br />
+        <div><strong>Date Landed:</strong> @member.LandedDate</div>
+        <br />
+        <div><strong>Favourite Quote:</strong> @member.FavouriteQuote</div>
+    </div>
+
+    <div class="member-list-item" >
+        <a href="/thread/new/@member.MemberID" id="member-thread-nav">Create Thread</a>
+    </div>
+</div>
     <br>
     
+
 }
+
+
+
+
 

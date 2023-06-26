@@ -1,0 +1,40 @@
+﻿@model NaijaCA_Forum.Models.ThreadDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Thread</h2>
+
+<form action="/thread/update/@Model.ThreadID" method="POST">
+
+    <div>
+        <label for="ThreadID"></label>  <input type="number" name="ThreadID" value=@Model.ThreadID id="ThreadID" style="display: none;" />
+    </div>
+
+    <div>
+        <label for="MemberID"></label>  <input type="number" name="MemberID" value=@Model.MemberID id="MemberID" style="display: none;" />
+    </div>
+
+    <div>
+        <label for="Title">Title: </label>  <input type="text" name="Title" value=@Model.Title id="Title" />
+    </div>
+
+    <div>
+        <label for="Comment">Comment: </label>  <input type="text" name="ThreadComment" value=@Model.ThreadComment id="Comment" />
+    </div>
+
+    <br />
+
+    <div>
+
+        <input type="submit" name="" value="Update Comment" />
+    </div>
+
+</form>
+
+<br />
+
+<div>
+    <a href="/thread/details/@Model.ThreadID">Cancel</a>
+</div>

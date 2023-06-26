@@ -1,4 +1,4 @@
-﻿@model NaijaCA_Forum.Models.MemberDto
+﻿@model NaijaCA_Forum.Models.ViewModels.ProvinceCityUpdate
      
 
 @{
@@ -8,48 +8,79 @@
 <h2>Edit Member</h2>
 
 
+<form action="/member/update/@Model.SelectedMember.MemberID" method="POST">
 
-<form action="/member/update/@Model.MemberID" method="POST">
+    <div>
+        <label for="MemberID"></label>  <input type="number" name="MemberID" value=@Model.SelectedMember.MemberID style="display: none;" />
+    </div>
 
+    <div>
+        <label for="FirstName">First Name: </label>  <input type="text" name="FirstName" value=@Model.SelectedMember.FirstName />
+    </div>
+    <div>
+        <label for="LastName">Last Name: </label>  <input type="text" name="LastName" value=@Model.SelectedMember.LastName />
+    </div>
+    <div>
+        <label for="UserName">Username: </label>  <input type="text" name="UserName" value=@Model.SelectedMember.UserName />
+    </div>
+
+    <div>
+        <label for="Province">Province: </label>
+
+        <select name="ProvinceID">
+            @foreach (var province in Model.ProvinceOptions2)
+            {
+
+                <option value="@province.ProvinceID">@province.ProvinceName</option>
+
+            }
+
+        </select>
+    </div>
+    <div>
+        <label for="City">City: </label>
+
+        <select name="CityID">
+            @foreach (var city in Model.CityOptions2)
+            {
+
+                <option value="@city.CityID">@city.CityName</option>
+
+            }
+
+        </select>
+    </div>
+    <div>
+        <label for="LandedDate">Landed Date: </label>  <input type="date" name="LandedDate" value=@Model.SelectedMember.LandedDate />
+    </div>
     <!--<div>
-        <label for="MemberID">MemberID: </label>  <input type="number" name="MemberID" value=@Model.MemberID />
+        <label for="FavouriteQuote">Favourite Quote: </label>  <input type="text" name="FavouriteQuote" value=@Model.SelectedMember.FavouriteQuote />
     </div>-->
     
 
     <div>
-        <label for="FirstName">First Name: </label>  <input type="text" name="FirstName" value=@Model.FirstName />
+        <label for="FavouriteQuote">Favourite Quote: </label>  <textarea type="text" name="FavouriteQuote" value=@Model.SelectedMember.FavouriteQuote>@Model.SelectedMember.FavouriteQuote</textarea>
     </div>
+    <!--<div>
+        <label for="Comment">Comment: </label>  <input type="text" name="Comment" value=@Model.SelectedMember.Comment />
+    </div>-->
+
     <div>
-        <label for="LastName">Last Name: </label>  <input type="text" name="LastName" value=@Model.LastName />
+        <label for="Comment">Comment: </label>  <textarea type="text" name="Comment" value=@Model.SelectedMember.Comment>@Model.SelectedMember.Comment</textarea>
     </div>
-    <div>
-        <label for="UserName">Username: </label>  <input type="text" name="UserName" value=@Model.UserName />
-    </div>
-    <!-- <div>
-         <label for="ProvinceName">ProvinceName: </label>  <input type="text" name="ProvinceName" value=@Model.ProvinceName />
-     </div>
-     <div>
-         <label for="CityName">CityName: </label>  <input type="text" name="CityName" value=@Model.CityName />
-     </div>-->
-    <div>
-        <label for="ProvinceID">ProvinceID: </label>  <input type="number" name="ProvinceID" value=@Model.ProvinceID />
-    </div>
-    <div>
-        <label for="CityID">CityID: </label>  <input type="number" name="CityID" value=@Model.CityID />
-    </div>
-    <div>
-        <label for="LandedDate">Landed Date: </label>  <input type="datetime" name="LandedDate" value=@Model.LandedDate />
-    </div>
-    <div>
-        <label for="FavouriteQuote">Favourite Quote: </label>  <input type="text" name="FavouriteQuote" value=@Model.FavouriteQuote />
-    </div>
-    <div>
-        <label for="Comment">Comment: </label>  <input type="text" name="Comment" value=@Model.Comment />
-    </div>
+
+
+    <br />
 
     <div>
 
         <input type="submit" name="" value="Update Member" />
+    </div>
+    <br />
+
+    <div>
+
+        <a href="/member/details/@Model.SelectedMember.MemberID">Cancel</a>
     </div>
 
 

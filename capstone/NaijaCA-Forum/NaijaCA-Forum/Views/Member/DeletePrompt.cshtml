@@ -4,29 +4,24 @@
     ViewBag.Title = "DeletePrompt";
 }
 
-<h2>Delete Prompt</h2>
+<h2>Delete Member @Model.FirstName</h2>
 
 <div>
-    Are you sure to delete Member below:
+    Please confirm to delete @Model.FirstName @Model.LastName's Profile!!!
 </div>
+
 <br />
-
-<div>Profile Picture: @Model.ProfilePic</div>
-
-<div>Username: @Model.UserName</div>
-<div>Name: @Model.FirstName @Model.LastName</div>
-<div>Province: @Model.ProvinceName</div>
-<div>City: @Model.CityName</div>
-<div>Date Landed: @Model.LandedDate</div>
-<div>Favourite Quote: @Model.FavouriteQuote</div>
-<div>Comment (Optional): @Model.Comment</div>
 
 <form action="/member/delete/@Model.MemberID" method="post">
     <button>Delete</button>
 </form>
+
 <br>
-<form action="/member/list" method="post">
-    <button>Cancel</button>
-</form>
+
+<div>
+    <a href="/member/details/@Model.MemberID">Cancel</a>
+</div>
+
+
 
 

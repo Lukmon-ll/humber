@@ -1,0 +1,38 @@
+﻿@model IEnumerable<NaijaCA_Forum.Models.ThreadDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+
+
+
+
+<h2 class="thread-list-heading">NaijaCA Forum Threads</h2>
+<hr />
+<br />
+
+Thread Count: <strong>@ViewBag.ThreadCount</strong>
+
+@foreach (var thread in Model)
+
+{
+
+    <div class="thread-list-body">
+        <div><strong>Username:</strong> 
+         <a href="/member/details/@thread.MemberID">@thread.UserName</a> </div>
+        <br>
+        <div><strong>Title:</strong> <a href="/thread/details/@thread.ThreadID" id="thread-list-title">@thread.Title</a> </div>
+        <br>
+        <div><strong>Thread Comment:</strong> @thread.ThreadComment</div>
+        <br>
+        <div><a href="/thread/new/@thread.ThreadID" id="thread-comment">Comment on thread</a></div>
+
+
+
+        
+    </div>
+    <br>
+}
+
